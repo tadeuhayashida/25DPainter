@@ -14,9 +14,11 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    painterwindow.cpp
+    painterwindow.cpp \
+    objectstroke.cpp
 
 HEADERS  += mainwindow.h \
-    painterwindow.h
+    painterwindow.h \
+    objectstroke.h
 
 FORMS    += mainwindow.ui
