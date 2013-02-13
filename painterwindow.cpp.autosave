@@ -34,7 +34,7 @@ PainterWindow::PainterWindow(QWidget *parent) :
 
 void PainterWindow::paint(QPainter &painter)
 {
-    painter.drawLine(0,0,200,200);
+   //painter.drawLine(0,0,200,200);
 }
 
 void PainterWindow::CreateNewStroke()
