@@ -30,16 +30,19 @@ PainterWindow::PainterWindow(QWidget *parent) :
     startingObject = true;
     strokeCounter = 0;
 
+
 }
 
 void PainterWindow::paint(QPainter &painter)
 {
-    painter.drawLine(0,0,200,200);
+   painter.drawLine(0,0,200,200);
+   printf("aaaa %d",strokeCounter);
 }
 
 void PainterWindow::CreateNewStroke()
 {
-    objectStrokeList.push_back(ObjectStroke(++strokeCounter));
+    objectStrokeList.push_back(ObjectStroke(++strokeCounter));    
+
 
 }
 
@@ -55,9 +58,12 @@ void PainterWindow::paintEvent(QPaintEvent *e)
 
 void PainterWindow::mousePressEvent(QMouseEvent *e)
 {
-    if(startingObject){
-        CreateNewStroke();
-        startingObject = false;
+    if(e->button()== Qt::LeftButton){
+        if(startingObject){
+            CreateNewStroke();
+            startingObject = false;
+        }
+
 
     }
 

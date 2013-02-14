@@ -6,6 +6,7 @@
 #include<QtCore>
 #include<qwt/qwt_curve_fitter.h>
 #include"objectstroke.h"
+#include <iostream>
 
 typedef QList<ObjectStroke> ObjectStrokeList;
 QDataStream &operator<<(QDataStream &out, const ObjectStroke &o);
